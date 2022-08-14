@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="reset.css" rel="stylesheet" >
+    <link href="style.css" rel="stylesheet" >
+</head>
+<body>
+    <div id="wrap">
+        <div class="WrapInner">
+            <div class="header">
+                <div><a href="/"><img class="logo" src="img/logo.png" alt=""></a></div>
+                <div>
+                    <button class="lightBtn"></button>
+                    <!-- <button class="infoIcon"></button> -->
+                </div>
+            </div>
+            <div class="searchWrap">
+                <div class="searchBox">
+                    <input type="text" placeholder="검색어를 입력하세요"/>
+                    <button></button>
+                </div>
+                <div class="searchHistory"></div>
+            </div>
+            <div id="newsWrap">
+                <div class="sort">
+                    <button>CLIP</button>
+                </div>
+                <div class="newsList">
+                </div>
+                <div class="firstInfo">Please enter a search term</div>
+                <div class="loading">
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="apikey.js"></script>
+    <script src="dark.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
