@@ -19,12 +19,16 @@ Dark모드와 Light모드를 구현하였습니다.
 - [x] 'unclip' 버튼 클릭시 'clip한 기사만 보기' 상태에서 노출되지 않는 여부
 - [x] 'clip' 버튼과 'unclip' 버튼 토글 가능 여부
 
+<br />
+
 ### search
 
 - [x] 검색시 search history에 추가
 - [x] search history가 존재하는 경우만 노출
 - [x] input에 focus중일 때만 search history 노출
 - [x] search history는 최대 5개까지만 저장
+
+<br />
 
 ### news
 
@@ -34,11 +38,15 @@ Dark모드와 Light모드를 구현하였습니다.
 - [x] 자세히보기 버튼 클릭 시 해당 기사를 새탭에서 open
 - [x] 뉴스를 추가로 불러오는지 여부(button을 클릭해서라도)
 
+<br />
+
 ### 프로젝트 완성도
 
 - [x] scroll을 내리는 경우 추가로 뉴스를 불러오는지 여부
 - [x] input 입력 후 0.5초동안 추가입력이 없는 경우에만 api를 호출
 - [x] input value가 있는 경우만 api를 호출
+
+<br />
 
 ### 개발과정
 
@@ -46,6 +54,8 @@ Dark모드와 Light모드를 구현하였습니다.
 - [x] 아무 commit이나 checkout 하여도 빌드에러가 나지않고 잘 실행되는지 여부
 - [x] api token이 git에 포함되지 않았으며, 쉽게 교체할 수 있는 구조인지 여부
 - [x] 코드가 목적에 따라 적절히 분리되어있는지 여부
+
+<br />
 
 ### JavaScript를 활용한 미니프로젝트
 
@@ -56,6 +66,8 @@ Dark모드와 Light모드를 구현하였습니다.
 - 최근 검색어 5개까지 저장 구현
 - focus를 활용해 input에 focus될때만 최근검색어 노출되도록 구현
 - Infinite scroll 구현
+
+<br />
 
 ### 이슈사항
 
