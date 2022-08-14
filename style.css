@@ -1,0 +1,318 @@
+*{margin: 0; padding: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none;}
+img{border: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    font-family: 'Roboto', 'NanumSquareRound', sans-serif;
+}
+.WrapInner{
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+#wrap .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+}
+#wrap .header .logo{
+    width: 140px;
+}
+#wrap .header div button{
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+}
+#wrap .header div .lightBtn{
+    width: 26px;
+    height: 26px;
+    background: url(img/light.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: bottom;
+}
+#wrap .header div .infoIcon{
+    width: 22px;
+    height: 22px;
+    background: url(img/infoicon.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* 검색창 */
+.searchBox{    
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    padding: 11px 15px;
+    border-radius: 18px;
+    background: #f8f8f8;
+}
+.searchBox input {
+    width: 96%;
+    padding-left: 6%;
+    border: 0;
+    background: #f8f8f8;
+    font-family: 'Roboto', 'NanumSquareRound', sans-serif;
+    outline: none;
+}
+.searchBox button{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    border: 0;
+    background: url(img/search_b.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.searchBox button img{
+    width: 20px;
+}
+.searchHistory{
+    display: none;
+    width: 84%;
+    margin: 15px auto 0;
+    text-align: center;
+}
+.searchHistory::before{
+    content: '최근검색어 : ';
+}
+.searchHistory div{
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 4px 12px;
+    border: 1px solid #dedfe0;
+    border-radius: 20px;
+}
+/* 뉴스리스트 */
+#newsWrap{
+    position: relative;
+    margin: 50px 0;
+    padding: 0 0 40px;
+}
+#newsWrap .sort {
+    padding: 0 0 18px;
+}
+#newsWrap .sort button{
+    display: inline-block;
+    padding: 0 0 0 20px;
+    font-size: .95rem;
+    color: #999;
+    border: 0;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+    background-image: url(img/sort_uncheck.png);
+    background-color: transparent ;
+    font-family: 'Roboto', 'NanumSquareRound', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+#newsWrap .sort button.check{
+    color: #e76191 !important;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+    background-image: url(img/sort_check.png);
+}
+#newsWrap .sort button:active{
+    transform: scale(0.8);
+}
+
+
+#newsWrap .newsList .news{
+    position: relative;
+    padding: 16px 16px 20px 50px;
+    background: rgb(255, 255, 255);
+    /* width: calc(100vw - 40px); */
+    overflow: hidden;
+    margin: 0px auto 12px;
+    box-shadow: rgb(0 0 0 / 8%) 0px 2px 12px;
+    border-radius: 16px;
+    
+}
+#newsWrap .newsList .news .clip{
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    width: 20px;
+    height: 30px;
+    border: 0;
+    background: url(img/bookmark_before.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+#newsWrap .newsList .news .clip.on{
+    background: url(img/bookmark_after.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#newsWrap .newsList .news .clip:active{
+    transform: scale(0.6);
+}
+#newsWrap .newsList .news .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px 0 14px;
+}
+
+#newsWrap .newsList .news .title a button{
+    width: 80px;
+    padding: 2px 0;
+    background: #f2f2f6;
+    border: 0;
+    border-radius: 20px;
+    color: #999;
+    font-family: 'Roboto', 'NanumSquareRound', sans-serif;
+    font-size: .8rem;
+    cursor: pointer;
+}
+#newsWrap .newsList .news .newsInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0 0;
+    border-top: 1px solid rgb(240, 240, 246);
+}
+#newsWrap .newsList .news .newsInfo span{
+    width: 78px;
+    height: 12px;
+    overflow: hidden;
+    word-break: break-all;
+}
+#newsWrap .newsList .news .newsInfo p,
+#newsWrap .newsList .news .newsInfo span{
+    color: rgb(118, 118, 118);
+    font-size: .8rem;
+}
+
+/* noresult */
+#newsWrap .warning,
+#newsWrap .firstInfo{
+    width: 50%;
+    margin: 40px auto 0;
+    padding: 18px 0;
+    color: rgb(143, 143, 143);
+    border: 1px dashed rgb(143, 143, 143);
+    text-align: center;
+    
+}
+
+/* 로딩 */
+.loading{
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity .3s ease-in;
+
+}
+.loading.show{
+    opacity: 1;
+}
+.loading .ball{
+    width: 10px;
+    height: 10px;
+    background-color: #777;
+    border-radius: 50%;
+    margin: 5px;
+    animation: jump .5s ease-in infinite;
+}
+.ball:nth-of-type(2) {
+	animation-delay: 0.1s;
+}
+
+.ball:nth-of-type(3) {
+	animation-delay: 0.2s;
+}
+
+@keyframes jump {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	
+	50% {
+		transform: translateY(-10px);
+	}
+}
+/* 다크모드 */
+#wrap.dark .header div .lightBtn{
+    background: url(img/dark.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#wrap.dark .header div .infoIcon{
+    background: url(img/infoicon_dark.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#wrap.dark .searchBox,
+#wrap.dark .searchBox input{
+    background: #38454c;
+}
+#wrap.dark .searchBox button{
+    background: url(img/search_dark.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#wrap.dark #newsWrap .sort button{
+    color: rgb(197, 197, 197);
+}
+#wrap.dark #newsWrap .newsList .news{
+    background: #2b373d;
+    
+}
+#wrap.dark #newsWrap .newsList .news h3{
+    color: #fff;
+}
+#wrap.dark #newsWrap .newsList .news a button{ background: #38454c;}
+#wrap.dark #newsWrap .newsList .news .newsInfo p,
+#wrap.dark #newsWrap .newsList .news .newsInfo span{
+    color: rgb(197, 197, 197);
+}
+#wrap.dark .searchBox input{
+    color: #fff;
+}
+#wrap.dark .searchHistory div{
+    color: #fff;
+}
+
+#wrap.dark input::-webkit-input-placeholder {
+    color: #fff;
+  }
+#wrap.dark input:-ms-input-placeholder {
+    color: #fff;
+  }
+#wrap.dark .warning,
+#wrap.dark .firstInfo{
+    color: #fff;
+    border: 1px dashed #fff;
+}
+#wrap.dark .loading .ball{
+    background-color: #fff;
+}
+/* 클립 */
+.none {
+    display: none;
+}
+.clipon{
+    display: block;
+}
